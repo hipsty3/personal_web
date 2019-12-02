@@ -1,0 +1,85 @@
+.container {
+  text-align: center;
+}
+
+.logo {
+  height: 45vmin;
+  margin-top: 10vmin;
+}
+
+.content {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  align-items: center;
+  justify-content: center;
+}
+
+.description-container {
+  display: flex;
+  justify-content: center; 
+  /* background-color: thistle; */
+  flex-direction: column;
+}
+
+p {margin-bottom:1.5em}
+
+.title {
+  font-size: calc(10px + 2vmin);
+  color: #282c34;
+  letter-spacing: 0.1em;
+}
+
+.link {
+  color: #09d3ac;
+}
+
+/* Navigation Bar */
+.nav {
+  width: 100%;
+  justify-content: space-between;
+  transition: 1s;
+  display: flex;
+  flex-direction: row;
+  border-bottom-style: solid;
+  border-bottom-color: #707070;
+  border-bottom-width: 1px;
+}
+
+.nav_text {
+  justify-content: left;
+  /* padding: 1rem; */
+  padding-left: 2rem;
+}
+
+.scrolling {
+  position: fixed;
+  background-color: rgba(255,255,255,0.99);
+
+}
+
+.description {
+  max-width: 55vmin;
+  justify-content: center;
+  font-size: calc(3px + 2vmin);
+  color: #282c34;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+}
+
+.footer {
+  height: 22vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-size: calc(5px + 2vmin);
+  letter-spacing: 0.05em;
+}
+
+body { 
+  height: 100vh;
+  color: #282c34;
+  }
