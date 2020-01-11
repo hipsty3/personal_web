@@ -1,54 +1,32 @@
-import React, { Component } from 'react';
-import me from './me.jpg';
+import React from 'react';
 import './App.css';
+import Footer from './components/Footer'
+import MainContent from './components/MainContent'
+import Navbar from './components/Navbar'
+import Projects from './components/Projects'
+import Experience from './components/Experience'
+import Contact from './components/Contact'
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      scrolling: false,
-    };
-  }
+import {
+	Route,
+	NavLink,
+	HashRouter
+} from "react-router-dom";
 
-  componentDidMount() {
-    window.addEventListener("scroll", () => {
-      const isTop = window.scrollY < 10;
-      !isTop ? this.setState({ scrolling: true }) : this.setState({ scrolling: false });
-      console.log(window.scrollY);
-    })
-  }
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll')
-  }
-
-  render() {
-    return (
-      <div className="container">
-        <div className={this.state.scrolling ? 'nav scrolling' : 'nav'}>
-          <div className="nav_text">
-            <h1>R A I S A</h1>
-          </div>
-        </div>
-        <div className="content">
-          <img src={me} className="logo" alt="logo" />
-          <div className="description-container">
-            <div className="title">
-              <h3>RAISA AMALIA</h3>
-            </div>
-            <div className="description">
-              <p> Melbourne based Frontend Developer experienced in Web and Mobile Development.</p>
-              <p>Currently a third year Computing and Software Systems Undergraduate in University of Melbourne. </p>
-            </div>
-          </div>
-        </div>
-        <div className="footer">
-            <h4><a href="https://github.com/hipsty3">github</a> | <a href=
-            "https://www.linkedin.com/in/ramalia/">linkedin</a> | raisaamaliaa@gmail.com </h4>
-        </div>
-      </div>
-    );
-  }
-
+function App() {
+	return (
+		<HashRouter>
+			<div className="container">
+				<Navbar />
+				<Route exact path="/" component={MainContent}/>
+				<Route exact path="/projects" component={Projects}/>
+				<Route exact path="/experience" component={Experience}/>
+				<Route exact path="/contact" component={Contact}/>
+				<Footer />
+			</div>
+		</HashRouter>
+	);
 }
+
 export default App;

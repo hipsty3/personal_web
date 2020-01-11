@@ -23,7 +23,7 @@
   flex-direction: column;
 }
 
-p {margin-bottom:1.5em}
+.desc-text { margin-bottom: 1.5em }
 
 .title {
   font-size: calc(10px + 2vmin);
@@ -37,26 +37,118 @@ p {margin-bottom:1.5em}
 
 /* Navigation Bar */
 .nav {
-  width: 100%;
-  justify-content: space-between;
   transition: 1s;
-  display: flex;
-  flex-direction: row;
   border-bottom-style: solid;
   border-bottom-color: #707070;
   border-bottom-width: 1px;
+	/* padding-bottom: 0rem; */
+	display: grid;
+	grid-template-areas: "nav-links";
+	width: 100%;
+	
 }
 
-.nav_text {
-  justify-content: left;
-  /* padding: 1rem; */
-  padding-left: 2rem;
+.nav_links {
+  grid-area: nav-links;
+  display: grid;
+	grid-template-areas: "home thing thing thing thing projects experience contact . ";
+	justify-content: space-between;
+  text-align: center;
+	z-index: 1;
+	width: 100%;
+	padding-top: 0.5rem;
+
+}
+.thing {
+	grid-area: thing;
+	z-index: 1;
+}
+
+
+a:link, a:visited {
+	color: violet;
+	text-decoration: none;
+}
+
+a:hover, 
+.nav_links a:hover {
+	border-bottom-style: solid;
+	border-bottom-color: rgb(250, 140, 132);
+	transition: 0.2s;
+	color:  rgb(250, 140, 132);
+	border-bottom-width: 4px;
+	/* padding-bottom: 0.1rem; */
+}
+
+.nav_links a:link, .nav_links a:visited {
+	text-decoration: none;
+  color: black;
+}
+
+
+
+.projects {grid-area: projects;}
+.experience {grid-area: experience;}
+.contact {grid-area: contact;}
+
+.home, .projects, .experience, .contact { 
+  padding-bottom: 1rem;
+	text-align: center;
+	z-index: 1;
+	border-bottom-style: solid;
+  border-bottom-color: rgba(255, 255, 255, 0);
+	border-bottom-width: 4px;
+	padding-top: 1rem;
+
+}
+
+.home {
+  padding-bottom: 0.55rem;
+  padding-top: 0.5rem;
+	grid-area: home;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+
+.active {
+	border-bottom-style: solid;
+  border-bottom-color: black;
+	border-bottom-width: 4px;
+	margin-bottom: 0rem;
+}
+
+@media (max-width:500px){
+  .nav {
+    width: 100%;
+    transition: 1s;
+    display: grid;
+    grid-template-areas: "nav-links";
+    border-bottom-style: solid;
+    border-bottom-color: #707070;
+    border-bottom-width: 1px;
+  }
+
+  .nav_links {
+    grid-area: nav-links;
+    width: 100%;
+		color: white;
+		grid-template-areas: "home projects experience contact ";
+		justify-content: space-between;
+    /* background-color: blue; */
+    text-align: right;
+    padding-top: 1rem;
+	}
+	
+	.thing {
+		grid-area: thing;
+	}
 }
 
 .scrolling {
   position: fixed;
-  background-color: rgba(255,255,255,0.99);
-
+	background-color: rgba(255,255,255,0.99);
 }
 
 .description {
