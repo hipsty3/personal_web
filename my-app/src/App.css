@@ -51,7 +51,7 @@
 .nav_links {
   grid-area: nav-links;
   display: grid;
-	grid-template-areas: "home thing thing thing thing thing projects experience contact . ";
+	grid-template-areas: "home thing thing thing thing thing 																																																																						projects experience contact . ";
 	justify-content: space-between;
   text-align: center;
 	z-index: 1;
