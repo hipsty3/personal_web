@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 .container {
   text-align: center;
 }
@@ -41,11 +51,9 @@
   border-bottom-style: solid;
   border-bottom-color: #707070;
   border-bottom-width: 1px;
-	/* padding-bottom: 0rem; */
 	display: grid;
 	grid-template-areas: "nav-links";
-	width: 100%;
-	
+	width: 100%;	
 }
 
 .nav_links {
@@ -66,26 +74,27 @@
 
 
 a:link, a:visited {
-	color: violet;
+	color: rgb(77, 66, 231);
 	text-decoration: none;
 }
 
-a:hover, 
+a:hover {
+	color:  rgb(161, 91, 201);
+	border-bottom-width: 4px;
+}
+
 .nav_links a:hover {
 	border-bottom-style: solid;
-	border-bottom-color: rgb(250, 140, 132);
+	border-bottom-color: rgb(161, 91, 201);
 	transition: 0.2s;
-	color:  rgb(250, 140, 132);
+	color:  rgb(161, 91, 201);
 	border-bottom-width: 4px;
-	/* padding-bottom: 0.1rem; */
 }
 
 .nav_links a:link, .nav_links a:visited {
 	text-decoration: none;
   color: black;
 }
-
-
 
 .projects {grid-area: projects;}
 .experience {grid-area: experience;}
