@@ -11,8 +11,8 @@ export default function MainContent() {
           <h3>RAISA AMALIA</h3>
         </div>
         <div className="description">
-          <p className="desc-text"> Melbourne based Frontend Developer experienced in Web and Mobile Development.</p>
-          <p className="desc-text">Currently a third year Computing and Software Systems Undergraduate in University of Melbourne. </p>
+          <p className="desc-text"> Freelance Frontend Mobile / Web Developer specialized in using React / React Native</p>
+          <p className="desc-text">[site under development]</p>
         </div>
       </div>
     </div>

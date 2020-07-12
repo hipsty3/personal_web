@@ -3,9 +3,9 @@ import me from './../me.jpg';
 
 export default function Contact() {
   return (
-    <div className="content">
+    <div className="contact-content">
 	  <div>
-	  	<h1>Hello Contact</h1>
+	  	<h2>CONTACT</h2>
       </div>
     </div>
   )

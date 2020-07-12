@@ -24,10 +24,10 @@ export default function Navbar() {
 	return (
 		<div className={scrolling ? 'nav scrolling' : 'nav'}>
 			<div className="nav_links">
-				<NavLink aria-current="true" exact to="/" class="active"><p className="home">R A I S A</p></NavLink>
+				<NavLink exact to="/" ><p className="home">R A I S A</p></NavLink>
 				<div className="thing"/>
 				<NavLink exact to="/projects" ><p className="projects">PROJECTS</p></NavLink>
-				<NavLink exact to="/experience"><p className="experience">EXPERIENCE</p></NavLink>
+				<NavLink exact to="/experience"><p className="experience">RESUME</p></NavLink>
 				<NavLink exact to="/contact"><p className="contact">CONTACT</p></NavLink>
 			</div>
 		</div>
