@@ -1,2 +1,2 @@
 # personal_web
-My personal website
+My personal website made using React, JS, HTML, CSS.
