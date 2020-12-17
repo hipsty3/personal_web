@@ -8,25 +8,27 @@ import Experience from './components/Experience'
 import Contact from './components/Contact'
 
 import {
-	Route,
-	NavLink,
-	HashRouter
+  Route,
+  Switch,
+  BrowserRouter as Router
 } from "react-router-dom";
 
 
 function App() {
-	return (
-		<HashRouter>
-			<div className="container">
-				<Navbar />
-				<Route exact path="/" component={MainContent}/>
-				<Route exact path="/projects" component={Projects}/>
-				<Route exact path="/experience" component={Experience}/>
-				<Route exact path="/contact" component={Contact}/>
-				<Footer />
-			</div>
-		</HashRouter>
-	);
+  return (
+    <Router>
+      <div className="container">
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={MainContent} />
+          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/experience" component={Experience} />
+          <Route exact path="/contact" component={Contact} />
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
