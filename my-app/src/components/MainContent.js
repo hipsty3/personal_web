@@ -1,5 +1,5 @@
 import React from 'react';
-import me from './../me.jpg';
+import me from './../images/me.jpg';
 import Projects from './Projects'
 
 export default function MainContent() {
@@ -11,8 +11,7 @@ export default function MainContent() {
           <h3>RAISA AMALIA</h3>
         </div>
         <div className="description">
-          <p className="desc-text"> Freelance Frontend Mobile / Web Developer specialized in using React / React Native</p>
-          <p className="desc-text">[site under development]</p>
+          <p className="desc-text"> Freelance Front End Developer specialized in using React / React Native</p>
         </div>
       </div>
     </div>

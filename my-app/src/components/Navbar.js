@@ -7,8 +7,9 @@ export default function Navbar() {
 
   useEffect(() => {
     function handleScrolling() {
-      const isTop = window.scrollY < 10;
-      !isTop ? setScrolling(true) : setScrolling(false);
+      setScrolling(true);
+      // const isTop = window.scrollY < 10;
+      // !isTop ? setScrolling(true) : setScrolling(false);
     }
     window.addEventListener("scroll", handleScrolling)
 
@@ -20,12 +21,12 @@ export default function Navbar() {
   return (
     <div className={scrolling ? 'nav scrolling' : 'nav'}>
       <div className="nav_links">
-        <NavLink exact to="/" ><p className="home">R A I S A</p></NavLink>
+        <NavLink exact to="/" className="navlink-style-home"><p className="home">R A I S A</p></NavLink>
         <div className="thing" />
-        <NavLink exact to="/projects" ><p className="projects">PROJECTS</p></NavLink>
-        <NavLink exact to="/experience"><p className="experience">RESUME</p></NavLink>
-        <NavLink exact to="/contact"><p className="contact">CONTACT</p></NavLink>
-      </div>
-    </div>
+        <NavLink exact to="/projects" className="navlink-style" ><p className="projects">PROJECTS</p></NavLink>
+        <NavLink exact to="/experience" className="navlink-style"><p className="experience">RESUME</p></NavLink>
+        <NavLink exact to="/contact" className="navlink-style"><p className="contact">CONTACT</p></NavLink>
+      </div >
+    </div >
   )
 }

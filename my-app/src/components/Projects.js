@@ -1,9 +1,9 @@
 import React from 'react';
 import './../styles/Projects.scss';
 import './ProjectElem'
-import color from './../color.jpg';
-import mementos from './../mementos2.png';
-import gps from './../gps2.png';
+import color from './../images/color.jpg';
+import mementos from './../images/mementos2.png';
+import gps from './../images/gps2.png';
 
 
 import ProjectElem from './ProjectElem';

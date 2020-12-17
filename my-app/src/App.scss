@@ -1,3 +1,5 @@
+$font-desc: Georgia, "Times New Roman", Times, serif;
+
 html {
   box-sizing: border-box;
 }
@@ -32,11 +34,13 @@ body {
 }
 
 .contact-content {
-  margin-top: 30vh;
+  min-height: 85vh;
   display: flex;
+  flex-direction: column;
   align-content: flex-end;
   align-items: center;
   justify-content: center;
+  // background-color: #09d3ac;
 }
 
 .description-container {
@@ -51,8 +55,8 @@ body {
 
 .title {
   font-size: calc(10px + 2vmin);
-  color: #282c34;
   letter-spacing: 0.1em;
+  color: #282c34;
 }
 
 .link {
@@ -61,25 +65,29 @@ body {
 
 /* Navigation Bar */
 .nav {
-  transition: 1s;
-  border-bottom-style: solid;
-  border-bottom-color: #707070;
-  border-bottom-width: 1px;
-  display: grid;
   grid-template-areas: "nav-links";
-  width: 100%;
+  // border-bottom-style: solid;
+  // border-bottom-color: #707070;
+  // border-bottom-width: 1px;
+  transition: 1s;
+  display: grid;
+  height: 40px;
   z-index: 100;
+  width: 100%;
+  // padding-bottom: 20px;
+  margin-top: 20px;
+
 }
 
 .nav_links {
   grid-area: nav-links;
-  display: grid;
-  grid-template-areas: "home thing thing thing thing thing 																																																																						projects experience contact . ";
+  grid-template-areas: "home thing thing thing thing thing projects experience contact . ";
   justify-content: space-between;
+  padding-top: 0.5rem;
   text-align: center;
+  display: grid;
   z-index: 1;
   width: 100%;
-  padding-top: 0.5rem;
 }
 .thing {
   grid-area: thing;
@@ -94,64 +102,74 @@ a {
   }
   &:hover {
     color: rgb(161, 91, 201);
-    border-bottom-width: 4px;
+    border-bottom-width: 2px;
   }
 }
 
-.nav_links {
-  a {
-    &:hover {
-      border-bottom-style: solid;
-      border-bottom-color: rgb(161, 91, 201);
-      transition: 0.2s;
-      color: rgb(161, 91, 201);
-      border-bottom-width: 4px;
-    }
-    &:link,
-    &:visited {
-      text-decoration: none;
-      color: black;
-    }
+@mixin navlink {
+  // padding-top:100px;
+  &:hover {
+    border-bottom-style: solid;
+    border-bottom-color: rgb(161, 91, 201);
+    transition: 0.2s;
+    color: rgb(161, 91, 201);
+    border-bottom-width: 2px;
+  }
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: black;
   }
 }
 
-.projects {
-  grid-area: projects;
-}
-.experience {
-  grid-area: experience;
-}
-.contact {
-  grid-area: contact;
+.navlink-style {
+  @include navlink;
+  margin-top: 0.3rem;
 }
 
-.home,
-.projects,
-.experience,
-.contact {
-  padding-bottom: 1rem;
+.navlink-style-home {
+  @include navlink;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+@mixin nav-elems {
+  // padding-bottom: 1rem;
   text-align: center;
   z-index: 1;
   border-bottom-style: solid;
   border-bottom-color: rgba(255, 255, 255, 0);
-  border-bottom-width: 4px;
-  padding-top: 1rem;
+  border-bottom-width: 2px;
+  // padding-top: 1rem;
+  // margin: 2px 0;
+  margin: 0;
 }
 
 .home {
-  padding-bottom: 0.55rem;
-  padding-top: 0.5rem;
+  @include nav-elems;
   grid-area: home;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  justify-self: center;
   font-weight: bold;
   font-size: 1.3rem;
+}
+
+.projects {
+  @include nav-elems;
+  grid-area: projects;
+}
+.experience {
+  @include nav-elems;
+  grid-area: experience;
+}
+.contact {
+  @include nav-elems;
+  grid-area: contact;
 }
 
 .active {
   border-bottom-style: solid;
   border-bottom-color: black;
-  border-bottom-width: 4px;
+  border-bottom-width: 2px;
   margin-bottom: 0rem;
 }
 
@@ -184,7 +202,8 @@ a {
 
 .scrolling {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.99);
+  // background-color: rgba(255, 255, 255, 0.99);
+  // background-color: red;
 }
 
 .description {
@@ -192,7 +211,7 @@ a {
   justify-content: center;
   font-size: calc(3px + 2vmin);
   color: #282c34;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: $font-desc;
   letter-spacing: 0.1em;
   line-height: 1.5em;
 }
