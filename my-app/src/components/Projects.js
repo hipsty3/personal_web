@@ -32,38 +32,44 @@ const projects = [
 	},
 	// {
 	// 	id: 3,
-	// 	image: me,
+	// 	image: color,
 	// 	description: 'Shadowbuild',
+	// 	tools: ['JavaScript', 'Pug', 'Firebase', 'Heroku'],
 	// 	link: "http://goblox.herokuapp.com/"
 	// },
 	// {
 	// 	id: 4,
-	// 	image: me,
+	// 	image: color,
 	// 	description: 'Cookpad2 (coming soon)',
+	// 	tools: ['JavaScript', 'Pug', 'Firebase', 'Heroku'],
 	// 	link: "http://goblox.herokuapp.com/"
 	// },
 	// {
 	// 	id: 5,
-	// 	image: me,
+	// 	image: color,
 	// 	description: 'Simple List (coming soon)',
+	// 	tools: ['JavaScript', 'Pug', 'Firebase', 'Heroku'],
 	// 	link: "http://goblox.herokuapp.com/"
 	// },
 	// {
 	// 	id: 6,
-	// 	image: me,
+	// 	image: color,
 	// 	description: 'NN_SNEK (coming soon)',
+	// 	tools: ['JavaScript', 'Pug', 'Firebase', 'Heroku'],
 	// 	link: "http://goblox.herokuapp.com/"
 	// },
 	// {
 	// 	id: 7,
-	// 	image: me,
+	// 	image: color,
 	// 	description: 'Pokedex WebApp (coming soon)',
+	// 	tools: ['JavaScript', 'Pug', 'Firebase', 'Heroku'],
 	// 	link: "http://goblox.herokuapp.com/"
 	// },
 	// {
 	// 	id: 8,
-	// 	image: me,
+	// 	image: color,
 	// 	description: 'Experimental WebApp (coming soon)',
+	// 	tools: ['JavaScript', 'Pug', 'Firebase', 'Heroku'],
 	// 	link: "http://goblox.herokuapp.com/"
 	// },
 ]

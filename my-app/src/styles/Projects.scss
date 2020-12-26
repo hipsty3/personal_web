@@ -1,13 +1,9 @@
 $primary-color: white;
 
-.content {
-	text-align: center;
-	/* width: 90%; */
-}
 .grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, auto);
+	grid-template-rows: repeat(10, auto);
 }
 .project_box {
 	max-width: 40vmax;
@@ -90,7 +86,7 @@ h2 {
 		max-width: 45vmax;
 	}
 }
-@media (max-width: 650px) {
+@media (max-width: 768px) {
 	.grid {
 		grid-template-columns: repeat(1, 1fr);
 	}

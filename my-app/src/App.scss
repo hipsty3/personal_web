@@ -4,10 +4,11 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+* {
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
 }
 
 body {
@@ -25,22 +26,21 @@ body {
 }
 
 .content {
-  min-height: 85vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-content: flex-end;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .contact-content {
-  min-height: 85vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
-  align-content: flex-end;
   align-items: center;
   justify-content: center;
-  // background-color: #09d3ac;
 }
 
 .description-container {
@@ -59,66 +59,54 @@ body {
   color: #282c34;
 }
 
-.link {
-  color: #09d3ac;
-}
-
 /* Navigation Bar */
 .nav {
-  grid-template-areas: "nav-links";
-  // border-bottom-style: solid;
-  // border-bottom-color: #707070;
-  // border-bottom-width: 1px;
-  transition: 1s;
-  display: grid;
-  height: 40px;
-  z-index: 100;
-  width: 100%;
-  // padding-bottom: 20px;
-  margin-top: 20px;
-
-}
-
-.nav_links {
-  grid-area: nav-links;
-  grid-template-areas: "home thing thing thing thing thing projects experience contact . ";
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  padding-top: 0.5rem;
-  text-align: center;
-  display: grid;
-  z-index: 1;
+  position: sticky;
   width: 100%;
+  height: 4vh;
+  z-index: 100;
+  align-items: center;
+  padding: 3vh 0 2vh;
+  transition: 0.6s;
 }
-.thing {
-  grid-area: thing;
-  z-index: 1;
+.scrolling {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 50%;
+  height: 30px;
+  align-self: center;
+}
+
+.navlink-home {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 30px;
+  align-self: center;
 }
 
 a {
-  &:link,
-  &:visited {
-    color: rgb(77, 66, 231);
-    text-decoration: none;
-  }
+  color: rgb(77, 66, 231);
+  text-decoration: none;
   &:hover {
     color: rgb(161, 91, 201);
-    border-bottom-width: 2px;
   }
 }
 
 @mixin navlink {
-  // padding-top:100px;
+  color: #282c34;
   &:hover {
-    border-bottom-style: solid;
-    border-bottom-color: rgb(161, 91, 201);
     transition: 0.2s;
     color: rgb(161, 91, 201);
-    border-bottom-width: 2px;
-  }
-  &:link,
-  &:visited {
-    text-decoration: none;
-    color: black;
   }
 }
 
@@ -129,81 +117,130 @@ a {
 
 .navlink-style-home {
   @include navlink;
+  padding: 0;
+  margin-bottom: 0;
   margin-left: 2rem;
   margin-right: 2rem;
 }
 
 @mixin nav-elems {
-  // padding-bottom: 1rem;
   text-align: center;
   z-index: 1;
-  border-bottom-style: solid;
-  border-bottom-color: rgba(255, 255, 255, 0);
-  border-bottom-width: 2px;
-  // padding-top: 1rem;
-  // margin: 2px 0;
-  margin: 0;
+  margin: 0 0 4px;
 }
 
 .home {
   @include nav-elems;
-  grid-area: home;
   justify-self: center;
+  align-self: center;
   font-weight: bold;
   font-size: 1.3rem;
+  padding: 0;
+  margin: 0;
 }
 
 .projects {
   @include nav-elems;
-  grid-area: projects;
 }
 .experience {
   @include nav-elems;
-  grid-area: experience;
 }
 .contact {
   @include nav-elems;
-  grid-area: contact;
 }
 
 .active {
-  border-bottom-style: solid;
-  border-bottom-color: black;
-  border-bottom-width: 2px;
   margin-bottom: 0rem;
+  color: rgb(161, 91, 201);
+}
+
+.burger {
+  display: none;
+  align-self: center;
+  margin: 0 2em 0;
+  cursor: pointer;
+
+  div {
+    transition: all 0.3s ease;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+  }
+}
+
+.toggle {
+  .line-1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .line-2 {
+    opacity: 0;
+  }
+
+  .line-3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
 }
 
 /* Smaller devices */
-@media (max-width: 500px) {
-  .nav {
-    width: 100%;
-    transition: 1s;
-    display: grid;
-    grid-template-areas: "nav-links";
-    border-bottom-style: solid;
-    border-bottom-color: #707070;
-    border-bottom-width: 1px;
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
   }
-
-  .nav_links {
-    grid-area: nav-links;
-    width: 100%;
+  .home {
     color: white;
-    grid-template-areas: "home projects experience contact ";
-    justify-content: space-between;
-    text-align: right;
-    padding-top: 1rem;
+    &:hover {
+      transition: 0.2s;
+      color: rgb(161, 91, 201);
+      border-bottom: none;
+    }
   }
-
-  .thing {
-    grid-area: thing;
+  .nav {
+    background-color: rgba(196, 157, 219, 0.952);
   }
-}
-
-.scrolling {
-  position: fixed;
-  // background-color: rgba(255, 255, 255, 0.99);
-  // background-color: red;
+  .nav-links {
+    position: absolute;
+    top: 9vh;
+    flex-direction: column;
+    right: 0px;
+    height: 91vh;
+    background-color: rgba(196, 157, 219, 0.952);
+    display: none;
+    transition: transform 0.5s ease-in;
+    width: 100%;
+    div {
+      opacity: 0;
+    }
+  }
+  .navlink-style {
+    p {
+      color: white;
+      font-weight: 700;
+      &:hover {
+        transition: 0.2s;
+        color: rgb(161, 91, 201);
+        border-bottom: none;
+      }
+    }
+  }
+  .nav-open {
+    transform: translateX(0);
+    display: flex;
+  }
+  .active {
+    border: none;
+    color: rgb(161, 91, 201);
+  }
+  .burger {
+    display: block;
+    &:hover {
+      transition: 0.2s;
+      div {
+        background-color: rgb(161, 91, 201);
+      }
+    }
+  }
 }
 
 .description {

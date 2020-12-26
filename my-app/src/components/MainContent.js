@@ -11,7 +11,7 @@ export default function MainContent() {
           <h3>RAISA AMALIA</h3>
         </div>
         <div className="description">
-          <p className="desc-text"> Freelance Front End Developer specialized in using React / React Native</p>
+          <p className="desc-text">Freelance Front End Developer specialized in using React / React Native</p>
         </div>
       </div>
     </div>
