@@ -1,13 +1,14 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 
 export default function ProjectElem(props) {
   return (
-    <a href={props.link}>
+    <NavLink to={props.link}>
       <div className="project_box" >
         <a className="image_link">
           <img className="image" src={props.image}></img>
           <div className="description_box">
-            <p className="description_proj">{props.description}</p>
+            <p className="description_proj">{props.desc}</p>
             <div className="tools">
               {
                 props.tools.map((tool) =>
@@ -19,8 +20,7 @@ export default function ProjectElem(props) {
             </div>
           </div>
         </a>
-
       </div>
-    </a>
+    </NavLink>
   )
 }
