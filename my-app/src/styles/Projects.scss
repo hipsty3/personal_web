@@ -53,7 +53,7 @@ a.image_link:hover {
 }
 
 .tool_text {
-	color:  white;
+	color: white;
 	font-size: 14px;
 	margin: 0;
 	padding: 4px 10px;
@@ -103,5 +103,125 @@ h2 {
 	}
 	.project_box {
 		max-width: 55vmax;
+	}
+}
+
+.project-title {
+	margin: 0;
+}
+
+.part-subtitle {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin: 0;
+}
+
+.project-content-container {
+	display: flex;
+	justify-content: center;
+}
+.project-content {
+	display: flex;
+	width: 90%;
+	flex-direction: column;
+	align-content: flex-end;
+	justify-content: center;
+	margin-top: 15vh;
+}
+
+// ProjectSubtitle
+
+// PartContent
+
+.part-content {
+	margin: 10vh 0 0;
+}
+
+
+.image-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.image-content {
+	width: 100%;
+	height: auto;
+}
+
+// ProjectPart
+
+.project-part {
+	margin-top: 20vh;
+}
+
+// PartTools
+
+.part-tools-container {
+	margin-top: 10vh;
+}
+
+.part-tools {
+	display: flex;
+}
+
+// PartTool
+
+.part-tool {
+	background-color: blueviolet;
+	margin: 2px 2px;
+	border-radius: 2px;
+	border: solid blueviolet 1.2px;
+}
+
+.part-tool-text {
+	color: white;
+	font-size: 16px;
+	margin: 0;
+	padding: 6px 14px;
+	font-weight: 500;
+}
+
+.part-summary {
+	display: flex;
+	height: 350px;
+	background-color: antiquewhite;
+	margin: 4vh;
+	justify-content: center;
+}
+
+.summary-header {
+	font-weight: bold;
+}
+
+.part-sub-summary {
+	display: flex;
+	height: 300px;
+	align-self: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 80%;
+}
+
+.summary-elem {
+	margin: 0 20px;
+}
+
+@media (max-width: 420px) {
+	.part-summary {
+		height: 60vh;
+	}
+	.part-sub-summary {
+		height: 90%;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		width: 95%;
+	}
+}
+@media (max-width: 320px) {
+	.part-summary {
+		height: 80vh;
 	}
 }

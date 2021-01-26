@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
 $font-desc: Georgia, "Times New Roman", Times, serif;
+$font-general: 'Open Sans', sans-serif;;
+$font-monospace: 'Inconsolata', monospace;
 
 html {
   box-sizing: border-box;
 }
 
 * {
+  font-family: $font-monospace;
   &:before,
   &:after {
     box-sizing: inherit;
@@ -14,10 +20,6 @@ html {
 body {
   height: 100vh;
   color: #282c34;
-}
-
-.container {
-  text-align: center;
 }
 
 .logo {
@@ -244,13 +246,15 @@ a {
 }
 
 .description {
-  max-width: 55vmin;
+  // max-width: 55vmin;
+  width: 60%;
   justify-content: center;
   font-size: calc(3px + 2vmin);
   color: #282c34;
-  font-family: $font-desc;
+  // font-family: $font-desc;
   letter-spacing: 0.1em;
   line-height: 1.5em;
+  align-self: center;
 }
 
 .footer {
