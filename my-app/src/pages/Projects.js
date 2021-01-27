@@ -17,13 +17,13 @@ export default function Projects() {
         <h2>PROJECTS</h2>
         <div className="grid">
           {projects.map((project) =>
-            <ProjectElem link={`${url}/${project.link}`} image={project.image} desc={project.desc} tools={project.tools} />
+            <ProjectElem link={`${url}/${project.link}`} image={project.image} title={project.title} tools={project.tools} />
           )}
         </div>
       </div>
         </Route>
         <Route path={`${path}/:projectId`}>
-          <ProjectContent />
+          <ProjectContent projects={projects}/>
         </Route>
       </Switch>
   )
