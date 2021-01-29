@@ -89,7 +89,7 @@ const projects = [
       year: '2019',
     },
     image: mementos,
-    desc: 'Android app that keeps track of family heirloom to be passed down to future generations.',
+    desc: 'Android app that keeps track of family heirloom to be passed down to future generations. ',
     parts: [
       {
         id: 0,
@@ -179,9 +179,9 @@ const projects = [
       },
       {
         id: 10,
-        title: '',
+        title: 'Demo',
         image: '',
-        desc: ``,
+        desc: `Contact me if you want to see the demo of the app!`,
         tools: ['React Native', 'JavaScript', 'Android', 'Firebase']
       },
     ],
