@@ -1,4 +1,4 @@
 # personal_web
-My first personal website made using React, JS, HTML, SCSS.
+First iteration of my personal site / portfolio. 
 
-Showcases my profile and portfolio on projects I've done / am doing.
+Made with Love and React, hosted on S3.
