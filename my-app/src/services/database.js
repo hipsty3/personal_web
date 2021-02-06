@@ -36,7 +36,7 @@ const projects = [
         id: 2,
         title: 'Development',
         image: '',
-        desc:  `The website is developed with React and mainly use functional components instead of class-based. We follow the atomic-design structure to structure our components, where the smallest most components are called atoms (e.g. buttons, header, etc), and atoms make up slightly bigger components called molecules, (e.g. search bar). Molecules populate a bigger component called organisms, which makes up a more integrated element (e.g. navigation bar, footer, card, etc). The organisms are then combined to create a page, which can be navigated to using links.\n
+        desc:  `The website is developed with React and mainly use functional components instead of class-based. We follow the atomic-design structure to structure our components, where the smallest components are called atoms (e.g. buttons, header, etc), and atoms make up slightly bigger components called molecules, (e.g. search bar). Molecules populate a bigger component called organisms, which makes up a more integrated element (e.g. navigation bar, footer, card, etc). The organisms are then combined to create a page, which can be navigated to using links.\n
                 For the sytles, we use SCSS. `,
         tools: ['React', 'JavaScript', 'HTML', 'SCSS', 'AWS']
       },
@@ -47,7 +47,7 @@ const projects = [
       organisation: 'Freelance',
       year: '2020-2021',
       work: 'Front-end development',
-      link: '(in progress)',
+      link: '',
     },
     link: "greenfields"
   },
@@ -76,7 +76,7 @@ const projects = [
       organisation: 'Personal Project',
       year: '2020-current',
       work: 'Design and Development',
-      link: 'https://github.com/hipsty3/foodiy',
+      link: '',
     },
     link: "foodiy"
   },
