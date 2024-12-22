@@ -6,7 +6,7 @@ export default function Experience() {
   return (
     <div className="content">
       <a href={resume}><h2 className="resume">Download Resume</h2></a>
-      <p>Last updated: 15 January 2021</p>
+      <p>Last updated: 22 December 2024</p>
     </div>
   )
 }
